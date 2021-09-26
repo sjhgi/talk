@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 14px;
+}
+
+.header {
+    background-color: #3b3a3f;
+    color: white;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main {
+    height: calc(100vh - 108px);
+    background-color: #F5F5F5;
+    padding: 20px 20px;
+    /* 怪异盒子 */
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.main .chat-container {
+    padding-bottom: 20px;
+}
+
+.main .chat-container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.main .chat-container .chat-txt {
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    max-width: 250px;
+    padding: 8px 8px;
+}
+
+
+/* 小箭头 */
+
+.chat-container.avatar-container>.chat-txt:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    padding: 0;
+    border: 6px solid transparent;
+    border-left-color: #98e855;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -12px;
+}
+
+.main .avatar-container .chat-txt {
+    margin-right: 10px;
+    text-align: right;
+    background-color: #98e855;
+    position: relative;
+}
+
+.chat-container>* {
+    float: left;
+}
+
+.chat-container.avatar-container>* {
+    float: right;
+}
+
+.main .chat-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main .robot-container img {
+    padding-right: 15px;
+}
+
+
+/* 输入框样式 */
+
+.footer {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 52px;
+    background-color: #ebebeb;
+    box-sizing: border-box;
+    box-shadow: 0 -2px 5px #d8d8d8;
+    line-height: 52px;
+    text-align: center;
+}
+
+.footer .input {
+    width: 270px;
+    height: 36px;
+    border-radius: 18px;
+    border: 1px solid #d8d8d8;
+    outline: none;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    color: #333;
+}
+
+.footer .btn {
+    display: inline-block;
+    background-color: #02cb0b;
+    width: 54px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: white;
+}
